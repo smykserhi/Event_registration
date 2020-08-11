@@ -8,9 +8,165 @@
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
     <link href= "index.css" rel="stylesheet"></link>
   </head>
-  <body>
-
-
-    <script type="text/javascript" src="weather.js"></script>
+  <body class="bg-dark">   
+     <!--Main page  -->
+    <div class="container" > 
+      <div class="row align-items-center  " style="height: 100vh;">
+        <div class="col text-center text-white">
+          <p class="display-1">Form templates</p>
+          <div class="btn-group  mt-5 "role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary text-info bg-dark border-info rounded-right" data-toggle="modal" data-target="#Reservation">Reservation</button>
+            <button type="button" class="btn btn-secondary text-info ml-4 bg-dark border-info rounded-left" data-toggle="modal" data-target="#Application">Application</button>          
+          </div>
+        </div>       
+      </div>
+    </div> 
+    <!-- Modal window  Reservation-->
+    <div class="modal fade" id="Reservation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <form>
+              <div class="form-group mb-3">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control " placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="col ">
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="basic-addon1">
+                  </div>
+                </div>     
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="number" class="form-control" placeholder="Format: 0123456789" aria-label="phone" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="email" class="form-control" placeholder="name@example.com" aria-label="email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="date" class="form-control" placeholder="dd/mm/2020" aria-label="date" aria-describedby="basic-addon1">
+              </div>
+              <!-- <div class="input-group mb-3 mt-3">                
+                <div class="input-group-prepend ">                  
+                  <span class="input-group-text text-dark  "  id="basic-addon1"><img src="./icons/phone.svg" alt="phone" class="img-fluid ">  </span>                  
+                </div>
+                <input type="text" class="form-control" placeholder="Format: 0123456789" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3 mt-3">                
+                <div class="input-group-prepend ">                  
+                  <span class="input-group-text text-dark" id="basic-addon1"><img src="./icons/email.png" alt="phone" class="img-fluid" style="width: 100%">  </span>                  
+                </div>
+                <input type="text" class="form-control" placeholder="name@example.com" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3 mt-3">                
+                <div class="input-group-prepend ">                  
+                  <span class="input-group-text text-dark"  id="basic-addon1 "><img src="./icons/calendar.png" class="img-fluid" alt="Responsive image">  </span>                  
+                </div>
+                <input type="text" class="form-control" placeholder="day/mm/2020" aria-label="Username" aria-describedby="basic-addon1">
+              </div> -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">O</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>10:00 AM</option>
+                  <option value="1">10:30 AM</option>
+                  <option value="2">11:00 AM</option>
+                  <option value="3">11:30 AM</option>
+                </select>
+                <div class="input-group-prepend ml-3">
+                  <label class="input-group-text" for="inputGroupSelect01">p</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+            </form>
+            <!-- /Form -->
+          </div >                  
+            <button type="button" class="btn btn-secondary text-info bg-white border-info rounded-right mx-auto mb-4 " data-dismiss="modal">Reserve</button>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal window  Reservation-->
+    <!-- Modal window Application -->
+    <div class="modal fade" id="Application" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <p class="mx-auto mt-3">We are happy you want to be a part of our team</p>
+          <div class="modal-body">
+            <!-- Form  -->
+            <form>
+              <div class="row">
+                <div class="col">
+                  <label for="appName">Name</label>
+                  <input type="text" id="appName" class="form-control" >
+                </div>
+                <div class="col">
+                  <label for="allLast">Last Name</label>
+                  <input type="text" id="allLast" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="appEmail">Email</label>
+                  <input type="text" id="appEmail" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="col">
+                  <label for="appPhone">Phone</label>
+                  <input type="text" id="appPhone" class="form-control" placeholder="Format: 0123456789">
+                </div>
+              </div>
+            </form>
+            <!-- /Form  -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal window Application -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./weather.js"></script>
   </body>
 </html>
