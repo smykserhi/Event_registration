@@ -132,37 +132,101 @@
           <p class="mx-auto mt-3">We are happy you want to be a part of our team</p>
           <div class="modal-body">
             <!-- Form  -->
-            <form>
+            <form class="needs-validation" novalidate>
               <div class="row">
                 <div class="col">
                   <label for="appName">Name</label>
-                  <input type="text" id="appName" class="form-control" >
+                  <input type="text" id="appName" class="form-control" required >
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
                 <div class="col">
                   <label for="allLast">Last Name</label>
-                  <input type="text" id="allLast" class="form-control">
+                  <input type="text" id="allLast" class="form-control"> required
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <label for="appEmail">Email</label>
-                  <input type="text" id="appEmail" class="form-control" placeholder="name@example.com">
+                  <input type="text" id="appEmail" class="form-control" placeholder="name@example.com" required> 
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
                 <div class="col">
                   <label for="appPhone">Phone</label>
-                  <input type="text" id="appPhone" class="form-control" placeholder="Format: 0123456789">
+                  <input type="text" id="appPhone" class="form-control" placeholder="Format: 0123456789" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
               </div>
+              <div class="form-group">
+                <label for="inputState">Position Aplied</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Front End Developer</option>
+                  <option>Back End Developer</option>
+                  <option>Full Steck Developer</option>
+                </select>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="fullTime" name="customRadio" class="custom-control-input" required>
+                <label class="custom-control-label" for="fullTime">Full Time</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="partTime" name="customRadio" class="custom-control-input" required>
+                <label class="custom-control-label" for="partTime">Part Time</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label class="" for="bio">What are you workplase skills</label>
+                <textarea id="bio" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="fileUpload">Upload your resume and list of referances</label>
+                <input type="file" class="form-control-file" id="fileUpload" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+              <button type="submit"  class="btn btn-secondary text-info bg-white border-info rounded-right col-2">Send</button>
             </form>
             <!-- /Form  -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+            
+            
+            <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            
+            </script>
+          </div>         
         </div>
       </div>
     </div>
+    
     <!-- /Modal window Application -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
