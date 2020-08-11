@@ -33,14 +33,26 @@
           </div>
           <div class="modal-body">
             <!-- Form -->
-            <form>
+            <form class="needs-validation" novalidate>
               <div class="form-group mb-3">
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control " placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control " placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a Name.
+                    </div>
                   </div>
                   <div class="col ">
-                    <input type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="basic-addon1" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a Last Name.
+                    </div>
                   </div>
                 </div>     
               </div>
@@ -48,19 +60,37 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">@</span>
                 </div>
-                <input type="number" class="form-control" placeholder="Format: 0123456789" aria-label="phone" aria-describedby="basic-addon1">
+                <input type="number" class="form-control" placeholder="Format: 0123456789" aria-label="phone" aria-describedby="basic-addon1" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a phone.
+                </div>
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">@</span>
                 </div>
-                <input type="email" class="form-control" placeholder="name@example.com" aria-label="email" aria-describedby="basic-addon1">
+                <input type="email" class="form-control" placeholder="name@example.com" aria-label="email" aria-describedby="basic-addon1" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a Email.
+                </div>
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">@</span>
                 </div>
-                <input type="date" class="form-control" placeholder="dd/mm/2020" aria-label="date" aria-describedby="basic-addon1">
+                <input type="date" class="form-control" placeholder="dd/mm/2020" aria-label="date" aria-describedby="basic-addon1" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a date.
+                </div>
               </div>
               <!-- <div class="input-group mb-3 mt-3">                
                 <div class="input-group-prepend ">                  
@@ -116,11 +146,12 @@
                   <option value="20">20</option>
                 </select>
               </div>
-            </form>
+            
             <!-- /Form -->
           </div >                  
-            <button type="button" class="btn btn-secondary text-info bg-white border-info rounded-right mx-auto mb-4 " data-dismiss="modal">Reserve</button>            
+            <button type="submit" class="btn btn-secondary text-info bg-white border-info rounded-right mx-auto mb-4 " >Reserve</button>            
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -141,39 +172,39 @@
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Please enter a Name.
                   </div>
                 </div>
                 <div class="col">
                   <label for="allLast">Last Name</label>
-                  <input type="text" id="allLast" class="form-control"> required
+                  <input type="text" id="allLast" class="form-control" required> 
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Please enter a Last Name.
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <label for="appEmail">Email</label>
-                  <input type="text" id="appEmail" class="form-control" placeholder="name@example.com" required> 
+                  <input type="email" id="appEmail" class="form-control" placeholder="name@example.com" required> 
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Please enter a Email.
                   </div>
                 </div>
                 <div class="col">
                   <label for="appPhone">Phone</label>
-                  <input type="text" id="appPhone" class="form-control" placeholder="Format: 0123456789" required>
+                  <input type="number" id="appPhone" class="form-control" placeholder="Format: 0123456789" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Please enter a Phone.
                   </div>
                 </div>
               </div>
@@ -196,7 +227,7 @@
                   Looks good!
                 </div>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  Please select Full or part time
                 </div>
               </div>
               <div class="form-group mt-3">
@@ -210,7 +241,7 @@
                   Looks good!
                 </div>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  Please attach file
                 </div>
               </div>
               <button type="submit"  class="btn btn-secondary text-info bg-white border-info rounded-right col-2">Send</button>
