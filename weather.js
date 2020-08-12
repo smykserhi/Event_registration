@@ -6,9 +6,19 @@
       // Loop over them and prevent submission
       var validation = Array.prototype.filter.call(forms, function(form) {
         form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+            let dateFromForm = document.getElementById('dateFirst').value;
+            let todatDate = new Date();
+            let formatedDate = todatDate.getFullYear()+'-'+0+(todatDate.getMonth()+1)+'-'+todatDate.getDate();
+            if(dateFromForm < formatedDate){
+                console.log(dateFromForm);
+                console.log(formatedDate);
+                console.log("in")
+                dateFromForm = todatDate
+            }
+          if (form.checkValidity() === false) {             
+                event.preventDefault();
+                event.stopPropagation();       
+              
           }
           form.classList.add('was-validated');
         }, false);
