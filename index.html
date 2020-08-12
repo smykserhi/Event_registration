@@ -62,7 +62,7 @@
                   <span class="input-group-text" id="basic-addon1"><div class="img" style="width: 20px; height: auto;"><img src="./icons/phone.svg" class="img-fluid" alt="Responsive image"></div></span>
                 </div>    
                 
-                <input type="number" class="form-control" placeholder="Format: 0123456789" aria-label="phone" aria-describedby="basic-addon1" required>
+                <input type="tel" pattern="[0-9]{10}"  class="form-control" placeholder="Format: 0123456789" aria-label="phone" aria-describedby="basic-addon1" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="col">
                   <label for="appPhone">Phone</label>
-                  <input type="number" id="appPhone" class="form-control" placeholder="Format: 0123456789" required>
+                  <input type="tel" pattern="[0-9]{10}" id="appPhone" class="form-control" placeholder="Format: 0123456789" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>

@@ -2,3 +2,6 @@ body{
   margin: 0;
   padding: 0;
 }
+/* input:invalid {
+  border: red solid 3px;
+} */
