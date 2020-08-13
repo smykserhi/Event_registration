@@ -5,23 +5,21 @@
       var forms = document.getElementsByClassName('needs-validation');
       // Loop over them and prevent submission
       var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-            let dateFromForm = document.getElementById('dateFirst').value;
-            let todatDate = new Date();
-            let formatedDate = todatDate.getFullYear()+'-'+0+(todatDate.getMonth()+1)+'-'+todatDate.getDate();
-            if(dateFromForm < formatedDate){
-                console.log(dateFromForm);
-                console.log(formatedDate);
-                console.log("in")
-                dateFromForm = todatDate
-            }
+        form.addEventListener('submit', function(event) {           
           if (form.checkValidity() === false) {             
                 event.preventDefault();
-                event.stopPropagation();       
-              
+                event.stopPropagation();                  
           }
           form.classList.add('was-validated');
         }, false);
       });
     }, false);
   })();
+//  
+document.getElementById("dateFirst").addEventListener("click", (e)=>{
+  let dateFromForm = document.getElementById('dateFirst');
+            let todatDate = new Date();
+            let formatedDate = todatDate.getFullYear()+'-'+0+(todatDate.getMonth()+1)+'-'+todatDate.getDate();
+            dateFromForm.min = formatedDate 
+            console.log("min date set up")
+})
