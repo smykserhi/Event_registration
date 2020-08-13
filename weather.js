@@ -19,7 +19,11 @@
 document.getElementById("dateFirst").addEventListener("click", (e)=>{
   let dateFromForm = document.getElementById('dateFirst');
             let todatDate = new Date();
-            let formatedDate = todatDate.getFullYear()+'-'+0+(todatDate.getMonth()+1)+'-'+todatDate.getDate();
+            let month = '0';
+            if((todatDate.getMonth()+1) < 10){
+             month += (todatDate.getMonth()+1).toString()
+            }else month = (todatDate.getMonth()+1).toString()               
+            let formatedDate = todatDate.getFullYear()+'-'+month+'-'+todatDate.getDate();
             dateFromForm.min = formatedDate 
             console.log("min date set up")
 })
