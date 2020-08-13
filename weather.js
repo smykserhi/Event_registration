@@ -17,9 +17,13 @@
   })();
 //  
 document.getElementById("dateFirst").addEventListener("click", (e)=>{
-  let dateFromForm = document.getElementById('dateFirst');
+            let dateFromForm = document.getElementById('dateFirst');
             let todatDate = new Date();
             let month = '0';
+            let day = "0";
+            if(todatDate.getDate() < 10){
+              day += todatDate.getDate().toString()
+             }else day = todatDate.getDate().toString()    
             if((todatDate.getMonth()+1) < 10){
              month += (todatDate.getMonth()+1).toString()
             }else month = (todatDate.getMonth()+1).toString()               
